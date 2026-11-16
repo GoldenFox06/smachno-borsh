@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="СмачноБорщ — українські рецепти, кулінарні поради та смачні страви на кожен день."
+    />
+    <title>СмачноБорщ — кулінарні рецепти</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="#home">СмачноБорщ</a>
+
+      <nav class="main-nav" aria-label="Головна навігація">
+        <a href="#home">Головна</a>
+        <a href="#recipes">Рецепти</a>
+        <a href="#categories">Категорії</a>
+        <a href="#tips">Поради</a>
+      </nav>
+    </header>
+
+    <div class="recipe-search">
+      <label for="recipe-search-input">Знайдіть свій рецепт</label>
+      <input
+        type="search"
+        id="recipe-search-input"
+        placeholder="Наприклад, борщ або сирники..."
+        autocomplete="off"
+      />
+    </div>
+
+    <main>
+      <section class="daily-recipe" id="daily-recipe">
+        <h2>Що приготувати сьогодні?</h2>
+        <p>
+          Не знаєте, що приготувати? Отримайте випадкову ідею для смачної
+          страви!
+        </p>
+
+        <button type="button" id="random-recipe-button">Знайти рецепт</button>
+
+        <div id="random-recipe-result" aria-live="polite">
+          Натисніть кнопку, щоб отримати ідею для страви.
+        </div>
+      </section>
+
+      <section class="hero" id="home">
+        <p class="eyebrow">Смак української кухні</p>
+        <h1>Відкрийте для себе тисячі смачних рецептів</h1>
+        <p>
+          Готуйте з любов'ю: від традиційних українських страв до швидких ідей
+          для щоденного меню.
+        </p>
+        <a class="primary-button" href="#recipes"> Переглянути рецепти </a>
+      </section>
+
+      <section class="recipes section-container" id="recipes">
+        <h2>Популярні рецепти</h2>
+        <p>Обирайте страву та відкривайте нові смаки.</p>
+
+        <div class="category-list">
+          <button type="button" data-category="all">Усі рецепти</button>
+          <button type="button" data-category="first">Перші страви</button>
+          <button type="button" data-category="second">Другі страви</button>
+          <button type="button" data-category="baking">
+            Випічка та десерти
+          </button>
+          <button type="button" data-category="salads">Салати</button>
+        </div>
+
+        <div class="recipe-list">
+          <article class="recipe-card" data-category="first">
+            <img
+              class="recipe-image"
+              src="img/borscht.jpg"
+              alt="Традиційний український борщ"
+            />
+            <h3>Український борщ</h3>
+            <p>Традиційний борщ із пампушками.</p>
+            <p>Час приготування: 90 хв</p>
+            <button class="recipe-button" type="button" data-recipe="borscht">
+              Переглянути рецепт
+            </button>
+          </article>
+
+          <article class="recipe-card" data-category="baking">
+            <img
+              class="recipe-image"
+              src="img/vareniky.jpg"
+              alt="Вареники з вишнею"
+            />
+            <h3>Вареники з вишнею</h3>
+            <p>Ніжне тісто та соковита вишнева начинка.</p>
+            <p>Час приготування: 60 хв</p>
+          </article>
+
+          <article class="recipe-card" data-category="second">
+            <img
+              class="recipe-image"
+              src="img/kotleta.jpg"
+              alt="Соковита куряча котлета з маслом."
+            />
+            <h3>Котлета по-київськи</h3>
+            <p>Соковита куряча котлета з маслом.</p>
+            <p>Час приготування: 50 хв</p>
+          </article>
+
+          <article class="recipe-card" data-category="baking">
+            <img
+              class="recipe-image"
+              src="img/syrnyky.jpg"
+              alt="Ніжні сирники зі сметаною та ягодами."
+            />
+            <h3>Сирники з ягодами</h3>
+            <p>Ніжні сирники зі сметаною та ягодами.</p>
+            <p>Час приготування: 25 хв</p>
+          </article>
+        </div>
+        <p id="no-recipes-message" hidden>
+          На жаль, за вашим запитом рецептів не знайдено.
+        </p>
+      </section>
+
+      <section class="categories section-container" id="categories">
+        <h2>Категорії страв</h2>
+        <div class="category-list">
+          <a href="#recipes">Перші страви</a>
+          <a href="#recipes">Другі страви</a>
+          <a href="#recipes">Випічка</a>
+          <a href="#recipes">Салати</a>
+          <a href="#recipes">Напої</a>
+        </div>
+      </section>
+
+      <section class="featured-recipe section-container" id="borscht">
+        <h2>Традиційний український борщ</h2>
+
+        <p>
+          Ароматна українська страва з буряком, капустою, овочами та насиченим
+          бульйоном.
+        </p>
+
+        <div class="recipe-details">
+          <div>
+            <h3>Інгредієнти</h3>
+            <ul>
+              <li>500 г м'яса</li>
+              <li>2 буряки</li>
+              <li>3 картоплини</li>
+              <li>200 г капусти</li>
+              <li>1 морква</li>
+              <li>1 цибулина</li>
+              <li>2 столові ложки томатної пасти</li>
+              <li>Сіль, перець і зелень за смаком</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Спосіб приготування</h3>
+            <ol>
+              <li>Звари м'ясний бульйон до готовності.</li>
+              <li>Наріж картоплю та капусту й додай до бульйону.</li>
+              <li>Натри буряк і моркву, наріж цибулю.</li>
+              <li>Протушкуй овочі з томатною пастою.</li>
+              <li>
+                Додай овочеву суміш до каструлі та доведи борщ до готовності.
+              </li>
+              <li>Дай страві настоятися й подавай із зеленню.</li>
+            </ol>
+          </div>
+        </div>
+
+        <button class="recipe-button" id="close-recipe" type="button">
+          Згорнути рецепт
+        </button>
+      </section>
+
+      <section class="tips section-container" id="tips">
+        <h2>Кулінарні поради</h2>
+        <div class="tips-list">
+          <article>
+            <h3>Смачний бульйон</h3>
+            <p>
+              Варіть бульйон на невеликому вогні, щоб він залишався прозорим.
+            </p>
+          </article>
+          <article>
+            <h3>Ніжне тісто</h3>
+            <p>Дайте тісту відпочити перед формуванням вареників.</p>
+          </article>
+          <article>
+            <h3>Зберігання продуктів</h3>
+            <p>
+              Зберігайте готові страви в чистих закритих контейнерах у
+              холодильнику.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="newsletter section-container" id="newsletter">
+        <h2>Меню на тиждень</h2>
+        <p>Отримуйте ідеї страв та кулінарні поради на електронну пошту.</p>
+
+        <form id="newsletter-form">
+          <label for="email">Ваша електронна пошта</label>
+          <div class="newsletter-controls">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="name@example.com"
+              required
+            />
+            <button type="submit">Підписатися</button>
+          </div>
+          <p id="form-message" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="logo" href="#home">СмачноБорщ</a>
+      <p>Рецепти, що об'єднують за одним столом.</p>
+      <p>&copy; 2026 СмачноБорщ. Усі права захищено.</p>
+    </footer>
+  </body>
+</html>
