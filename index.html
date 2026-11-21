@@ -26,12 +26,17 @@
 
     <div class="recipe-search">
       <label for="recipe-search-input">Знайдіть свій рецепт</label>
-      <input
-        type="search"
-        id="recipe-search-input"
-        placeholder="Наприклад, борщ або сирники..."
-        autocomplete="off"
-      />
+
+      <div class="search-box">
+        <img src="img/icons/search.svg" alt="" class="icon" />
+
+        <input
+          type="search"
+          id="recipe-search-input"
+          placeholder="Наприклад, борщ або сирники..."
+          autocomplete="off"
+        />
+      </div>
     </div>
 
     <main>
@@ -82,7 +87,10 @@
             />
             <h3>Український борщ</h3>
             <p>Традиційний борщ із пампушками.</p>
-            <p>Час приготування: 90 хв</p>
+            <p class="recipe-info">
+              <img src="img/icons/clock.svg" alt="" class="icon" />
+              Час приготування: 90 хв
+            </p>
             <button class="recipe-button" type="button" data-recipe="borscht">
               Переглянути рецепт
             </button>
